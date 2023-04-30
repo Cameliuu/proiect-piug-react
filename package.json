@@ -1,6 +1,7 @@
 {
   "name": "piug-react",
   "version": "0.1.0",
+  "homepage": "https://Cameliuu.github.io/proiect-piug-react",
   "private": true,
   "dependencies": {
     "@react-spring/web": "^9.7.2",
@@ -9,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
     "framer-motion": "^10.12.4",
+    "gh-pages": "^5.0.0",
     "granim": "^2.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
@@ -20,6 +22,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
