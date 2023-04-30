@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import NavigationBar from "./Components/NavigationBar.tsx";
+import CarouselComponent from "./Components/CarouselComponent.tsx";
+import Menu from "./Components/Menu.tsx";
+import {Carousel} from "react-bootstrap";
+import AboutsComponent from "./Components/AboutsComponent.tsx";
+function App()
+{
+  return <div>
+    <NavigationBar></NavigationBar>
+    <CarouselComponent></CarouselComponent>
+    <Menu></Menu>
+    <AboutsComponent></AboutsComponent>
+  </div>
 }
-
 export default App;

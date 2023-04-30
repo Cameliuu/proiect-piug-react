@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "name": "Piept de pui",
+    "image": "https://st2.depositphotos.com/3833507/8753/i/600/depositphotos_87533954-stock-photo-grilled-chicken-breast.jpg",
+    "price": 9.99,
+    "category": "Pui"
+  },
+  {
+    "id": 2,
+    "name": "Puple de pui",
+    "image": "https://st.depositphotos.com/1003814/3363/i/600/depositphotos_33637739-stock-photo-grilled-chicken-drumsticks.jpg",
+    "price": 12.99,
+    "category": "Pui"
+  },
+  {
+    "id": 3,
+    "name": "Aripioare de pui",
+    "image": "https://st2.depositphotos.com/1692343/8128/i/600/depositphotos_81286030-stock-photo-spicy-homemade-buffalo-wings.jpg",
+    "price": 7.99,
+    "category": "Pui"
+  },
+  {
+    "id": 4,
+    "name": "Coaste de pui",
+    "image": "https://st2.depositphotos.com/7893620/10665/i/600/depositphotos_106651462-stock-photo-roasted-beef-steak-with-vegetables.jpg",
+    "price": 14.99,
+    "category": "Pui"
+  },
+  {
+    "id": 5,
+    "name": "Cotlet de porc la grătar",
+    "image": "https://st4.depositphotos.com/2208212/21763/i/600/depositphotos_217636936-stock-photo-char-siu-pork-chinese-roasted.jpg",
+    "price": 14.99,
+    "category": "Porc"
+  },
+  {
+    "id": 6,
+    "name": "Ciolan de porc afumat",
+    "image": "https://static9.depositphotos.com/1000336/1092/i/600/depositphotos_10929950-stock-photo-roasted-pork-knuckle-with-potatoes.jpg",
+    "price": 12.99,
+    "category": "Porc"
+  },
+  {
+    "id": 7,
+    "name": "Muschi de porc în crustă de condimente",
+    "image": "https://st2.depositphotos.com/1692343/5635/i/600/depositphotos_56358181-stock-photo-homemade-hot-pork-tenderloin.jpg",
+    "price": 19.99,
+    "category": "Porc"
+  },
+  {
+    "id": 8,
+    "name": "Șnițel vienez de porc",
+    "image": "https://st2.depositphotos.com/1692343/8315/i/600/depositphotos_83154852-stock-photo-homemade-breaded-german-weiner-schnitzel.jpg",
+    "price": 11.99,
+    "category": "Porc"
+  },
+  {
+    "id": 9,
+    "name": "Carnati de porc afumati",
+    "image": "https://st2.depositphotos.com/1031681/5809/i/600/depositphotos_58091379-stock-photo-grilled-sausages-in-a-pan.jpg",
+    "price": 9.99,
+    "category": "Porc"
+  }
+
+
+
+
+]
