@@ -1,14 +1,17 @@
 [
   {
     "title": "Our Mission",
-    "text": "Our mission is to provide an easy and convenient way for students to order food from their university canteen. We believe that ordering food should be hassle-free and students should be able to focus on their studies without worrying about long lines or limited food options."
+    "text": "Our mission is to provide an easy and convenient way for students to order food from their university canteen. We believe that ordering food should be hassle-free and students should be able to focus on their studies without worrying about long lines or limited food options.",
+    "image": "https://www.euractiv.com/wp-content/uploads/sites/2/2018/06/restauration-collective-800x450.jpg"
   },
   {
     "title": "Our Team",
-    "text": "We are a team of passionate developers who believe in the power of technology to improve people's lives. We have worked hard to create an app that is easy to use, fast, and reliable. Our team is dedicated to providing the best possible experience for our users."
+    "text": "We are a team of passionate developers who believe in the power of technology to improve people's lives. We have worked hard to create an app that is easy to use, fast, and reliable. Our team is dedicated to providing the best possible experience for our users.",
+    "image": "https://ontheburner.foodservicedirect.com/wp-content/uploads/2019/09/staffmeeting_resized_otb.jpg"
   },
   {
     "title": "Contact Us",
-    "text": "If you have any questions, comments, or feedback, please feel free to contact us. You can reach us at support@universitycanteen.com. We would love to hear from you!"
+    "text": "If you have any questions, comments, or feedback, please feel free to contact us. You can reach us at support@universitycanteen.com. We would love to hear from you!",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9TlPEASphS-oEk4beVwe-dVxuPLd4Vc5fcA&usqp=CAU   "
   }
 ]
