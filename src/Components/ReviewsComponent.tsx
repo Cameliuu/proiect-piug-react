@@ -9,7 +9,7 @@ import {useInView} from "react-intersection-observer";
 function ReviewsComponent()
 {
     const controls = useAnimation();
-    const {ref, inView} = useInView({threshold: 0.1});
+    const {ref, inView} = useInView({threshold: 0.5});
     useEffect(() => {
         if (inView) {
             controls.start({
@@ -48,13 +48,29 @@ function ReviewsComponent()
                                     exit={{opacity: 0, x: -100}}
                                     transition={{ type: 'spring', damping: 15, mass: 0.75, stiffness: 100 }}
                                     whileHover={{scale: 1.1}}
-                                    whileTap={{scale: 0.9}}>
+                                    >
 
-                                    <Card style={{marginTop:"20%",width: '100%', height: "20px", border:"none"}}>
+                                    <Card style={{marginLeft:"35%",marginTop:"10%",width: '565px', height: "113px", background:'#D9D9D9', border:'none', borderRadius:'25px',boxShadow:'0px 4px 6px 0px #00000040'
+                                    }}>
 
-                                        <Card.Img style={{width:'100px',height:'100px',marginLeft:element.marginLeftImg}} src={require(`../img/user.png`)}></Card.Img>
-                                        <Card.Text style={{marginLeft:element.marginLeftText, marginTop:"-5%", fontFamily:'Satisfy'}} className="text-center">{element.text}</Card.Text>
+                                        <Container className='d-flex justify-content-between'>
+                                            <Container style={{marginLeft:'40px'}}>
+                                                <Card.Img style={{width:'58px',height:'58px'  }} src={require(`../img/user.png`)}>
 
+                                                </Card.Img>
+
+                                                <img src={require('../img/star.png')} style={{width:'100px', marginLeft:"5px",marginTop:'-5%'}} />
+                                                <p style={{fontSize:'10px', marginLeft:'70px',marginTop:'-10%'}}> 16/08/2023 via Facebook</p>
+                                                <Card.Text style={{fontFamily:'Roboto', fontSyle:'normal', fontWeight:'300', fontSize:'23px', marginTop:'5%'}} className="  ">{element.text}</Card.Text>
+                                            </Container>
+
+
+
+                                            <div>
+                                                <img src={require('../img/fb.png')} />
+                                            </div>
+
+                                        </Container>
 
                                     </Card>
                                 </motion.div>

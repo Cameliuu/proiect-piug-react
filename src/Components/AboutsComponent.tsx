@@ -43,7 +43,7 @@
 
         return (
             <>
-                <div style={{backgroundColor: 'black', height: '75vh', fontFamily:'Inconsolata'}}>
+                <div style={{backgroundColor: 'black', fontFamily:'Inconsolata'}}>
                     <Container style={{marginTop: '2%'}}>
                         <motion.div ref={ref}
                                     initial={{opacity: 0, x: 100}}
@@ -58,7 +58,7 @@
                         <Row className="d-flex justify-content-between ml-auto">
                             {j.map((element) => (
 
-                                <Col key={element.id} sm={12} md={6} lg={4} xl={3} style={{paddingTop: '7%'}}>
+                                <Col className='col-xs-12 col-sm-6 col-md-4 col-lg-3' key={element.id} sm={12} md={6} lg={4} xl={3} style={{paddingTop: '2%'}}>
                                     <AnimatePresence>
                                         <motion.div
                                             ref={ref}
@@ -67,7 +67,7 @@
                                             exit={{opacity: 0, x: -100}}
                                             transition={{ type: 'spring', damping: 15, mass: 0.75, stiffness: 100 }}
                                             whileHover={{scale: 1.1}}
-                                            whileTap={{scale: 0.9}}>
+                                            >
 
                                             <Card style={{width: '100%', height: "300px", backgroundSize:'100% 303px',backgroundColor:'rgba(52, 52, 52, 0.1    )'}}>
 

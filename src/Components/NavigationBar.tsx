@@ -1,13 +1,17 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Logo from "./Logo.tsx";
-import {NavbarBrand} from "react-bootstrap";
+import {Button, NavbarBrand} from "react-bootstrap";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
 import NavbarCollapse from "react-bootstrap/NavbarCollapse";
+import {Offcanvas} from "react-bootstrap";
 import Nav from 'react-bootstrap/Nav';
 import {useEffect, useState} from "react";
 import {Link} from 'react-scroll';
 import {motion} from "framer-motion";
+import NavbarOffcanvas from "react-bootstrap/NavbarOffcanvas";
+import Modal from "react-bootstrap/Modal";
+import CartProduct from "./CartProduct.tsx";
 
 const linkStyle = {
     fontWeight: 'bold',
@@ -19,6 +23,10 @@ let links = ["Menu", "Reviews", "About Us", "Contact"]
 
 
 function NavigationBar() {
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     let [selectedIndex, setSelectedIndex] = useState(-1);
     let [navbarStyle, setNavbarStyle] = useState({});
     useEffect(() => {
@@ -81,12 +89,27 @@ function NavigationBar() {
                         ))}
                     </Nav>
                 </Container>
-
-                <Navbar.Collapse className="justify-content-end">
+                <Container className="justify-content-between"  >
+                <Navbar.Collapse >
                     <Navbar.Text>
                         Signed in as: <a href="#login">Mark Otto</a>
                     </Navbar.Text>
                 </Navbar.Collapse>
+
+                <Navbar.Collapse>
+                    <Button onClick={handleShow}>Cart  Items</Button>
+                </Navbar.Collapse>
+                    <Modal show={show} onHide={handleClose}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Shopping Cart</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+
+                               <CartProduct></CartProduct>
+
+                        </Modal.Body>
+                    </Modal>
+                </Container>
             </Container>
         </Navbar>
     );

@@ -4,13 +4,14 @@ import Nav from "react-bootstrap/Nav";
 import {Card} from "react-bootstrap";
 import {Button} from "react-bootstrap";
 import data from './mancare.json'
-import {useEffect, useRef, useState} from "react";
+import {useContext, useEffect, useRef, useState} from "react";
 import {Link} from "react-scroll";
 import ButtonComponent from "./ButtonComponent.tsx";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import {AnimatePresence, motion} from "framer-motion";
+import {CartContext} from "./CartContext.tsx";
 
 
 let mancaruri = ["Pui", "Porc", "Salata", "Ciorba", "Garnitura", "Desert"]
@@ -40,8 +41,16 @@ const categoryStyleSelected =
         borderBottom:'2px solid black',
         fontFamily:"Roboto",
     }
+    function GetProductData(id)
+    {
+        let prod = data.find(mancare => mancare.id ===id);
+         return (prod === undefined) ? undefined : prod;
+    }
 
-function Menu() {
+function Menu(props) {
+
+    const cart = useContext(CartContext);
+
     const listRef = useRef<HTMLUListElement | null>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     let [selectedCategory, setCategory] = useState("Pui")
@@ -113,14 +122,14 @@ function Menu() {
                                                animate={{ opacity: 1, scale: 1 }}
                                                transition={{ duration: 0.5 }}
                                             whileHover={{ scale: 1.1 }}
-                                            whileTap={{ scale: 0.9 }} >
+                                             >
 
-                                <Card style={{width: '300px', height:"303px"}}>
+                                <Card style={{width: '300px', height:"303px", border:'none'}}>
                                     <Card.Img variant="top" src={mancare.image} style={imgStyle} />
                                     <Card.Title className="text-center">{mancare.name}</Card.Title>
                                     <Card.Text className="text-center">Pret:{mancare.price}</Card.Text>
 
-                                    <ButtonComponent Text={"Add to cart"} onClick={() => {console.log(mancare.id)}} />
+
                                 </Card>
                                 </motion.div>
                                 </AnimatePresence>
@@ -136,5 +145,6 @@ function Menu() {
         </>
     );
 }
+
 
 export default Menu

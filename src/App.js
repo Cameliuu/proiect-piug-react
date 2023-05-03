@@ -5,6 +5,7 @@ import {Carousel} from "react-bootstrap";
 import AboutsComponent from "./Components/AboutsComponent.tsx";
 import ReviewsComponent from "./Components/ReviewsComponent.tsx";
 import Container from "react-bootstrap/Container";
+import ConctactUsComponent from "./Components/ConctactUsComponent.tsx";
 function App()
 {
   return <div>
@@ -15,7 +16,9 @@ function App()
     <Menu></Menu>
     <AboutsComponent></AboutsComponent>
     <ReviewsComponent></ReviewsComponent>
+
     </Container>
+    <ConctactUsComponent></ConctactUsComponent>
   </div>
 }
 export default App;
