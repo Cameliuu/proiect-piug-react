@@ -50,7 +50,7 @@ function ReviewsComponent()
                                     whileHover={{scale: 1.1}}
                                     whileTap={{scale: 0.9}}>
 
-                                    <Card style={{marginTop:"35%",width: '100%', height: "20px", border:"none"}}>
+                                    <Card style={{marginTop:"20%",width: '100%', height: "20px", border:"none"}}>
 
                                         <Card.Img style={{width:'100px',height:'100px',marginLeft:element.marginLeftImg}} src={require(`../img/user.png`)}></Card.Img>
                                         <Card.Text style={{marginLeft:element.marginLeftText, marginTop:"-5%", fontFamily:'Satisfy'}} className="text-center">{element.text}</Card.Text>

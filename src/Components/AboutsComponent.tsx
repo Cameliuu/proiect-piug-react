@@ -43,7 +43,7 @@
 
         return (
             <>
-                <div style={{backgroundColor: 'black', height: '75vh'}}>
+                <div style={{backgroundColor: 'black', height: '75vh', fontFamily:'Inconsolata'}}>
                     <Container style={{marginTop: '2%'}}>
                         <motion.div ref={ref}
                                     initial={{opacity: 0, x: 100}}
@@ -51,7 +51,7 @@
                                     exit={{opacity: 0, x: 100}}>
 
 
-                        <Container className='text-center' style={{paddingTop: '3%', fontSize: '30px', color: '#ffff'}}>
+                        <Container className='text-center' style={{paddingTop: '3%', fontSize: '30px', color: '#ffff', fontWeight:'bold'}}>
                             About Us
                         </Container>
                         </motion.div>
