@@ -6,13 +6,14 @@ import NavbarToggle from "react-bootstrap/NavbarToggle";
 import NavbarCollapse from "react-bootstrap/NavbarCollapse";
 import {Offcanvas} from "react-bootstrap";
 import Nav from 'react-bootstrap/Nav';
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {Link} from 'react-scroll';
 import {motion} from "framer-motion";
 import NavbarOffcanvas from "react-bootstrap/NavbarOffcanvas";
 import Modal from "react-bootstrap/Modal";
 import CartProduct from "./CartProduct.tsx";
 
+import {AuthContext} from './AuthContext.js'
 const linkStyle = {
     fontWeight: 'bold',
     fontSize: '20px',
@@ -25,6 +26,7 @@ let links = ["Menu", "Reviews", "About Us", "Contact"]
 function NavigationBar() {
 
     const [show, setShow] = useState(false);
+    const {isLoggedIn,username} = useContext(AuthContext)
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     let [selectedIndex, setSelectedIndex] = useState(-1);
@@ -90,11 +92,13 @@ function NavigationBar() {
                     </Nav>
                 </Container>
                 <Container className="justify-content-between"  >
-                <Navbar.Collapse >
-                    <Navbar.Text>
-                        Signed in as: <a href="#login">Mark Otto</a>
-                    </Navbar.Text>
-                </Navbar.Collapse>
+                    <Navbar.Collapse>
+                        {isLoggedIn ? (
+                            <Navbar.Text>Logged in as: {username}</Navbar.Text>
+                        ) : (
+                            <Button onClick={() => console.log(username+":"+isLoggedIn)}>Log in</Button>
+                        )}
+                    </Navbar.Collapse>
 
                 <Navbar.Collapse>
                     <Button onClick={handleShow}>Cart  Items</Button>
@@ -105,7 +109,7 @@ function NavigationBar() {
                         </Modal.Header>
                         <Modal.Body>
 
-                               <CartProduct></CartProduct>
+                               <CartProduct id='1'></CartProduct>
 
                         </Modal.Body>
                     </Modal>

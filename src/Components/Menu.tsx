@@ -41,7 +41,7 @@ const categoryStyleSelected =
         borderBottom:'2px solid black',
         fontFamily:"Roboto",
     }
-    function GetProductData(id)
+    export function GetProductData(id)
     {
         let prod = data.find(mancare => mancare.id ===id);
          return (prod === undefined) ? undefined : prod;
@@ -82,7 +82,7 @@ function Menu(props) {
 
 
     return (
-        <>
+        <CartContext.Provider>
             <Container style={{marginTop:'2%', boxShadow:'0px 2px 5px #777'}}>
             <Container ref={containerRef} className=' py-5 mr-auto d-flex allign justify-content-between' style={{width:'70%'}}>
                 <Nav className="items-container"></Nav>
@@ -142,7 +142,7 @@ function Menu(props) {
 
             </Container>
 
-        </>
+        </CartContext.Provider>
     );
 }
 

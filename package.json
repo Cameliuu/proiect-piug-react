@@ -4,10 +4,15 @@
   "homepage": "https://Cameliuu.github.io/proiect-piug-react",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.3",
     "@react-spring/web": "^9.7.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.24.0",
     "bootstrap": "^5.2.3",
     "framer-motion": "^10.12.4",
     "gh-pages": "^5.0.0",
@@ -19,6 +24,7 @@
     "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.9",
     "react-spring": "^9.7.1",
+    "react-use-cart": "^1.13.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

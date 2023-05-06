@@ -6,10 +6,12 @@ import AboutsComponent from "./Components/AboutsComponent.tsx";
 import ReviewsComponent from "./Components/ReviewsComponent.tsx";
 import Container from "react-bootstrap/Container";
 import ConctactUsComponent from "./Components/ConctactUsComponent.tsx";
+import {AuthProvider} from "./Components/AuthContext.js";
+
 function App()
 {
-  return <div>
-
+  return(
+    <AuthProvider>
     <NavigationBar></NavigationBar>
     <CarouselComponent></CarouselComponent>
     <Container>
@@ -19,6 +21,7 @@ function App()
 
     </Container>
     <ConctactUsComponent></ConctactUsComponent>
-  </div>
+    </AuthProvider>
+  );
 }
 export default App;
